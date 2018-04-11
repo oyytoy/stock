@@ -1,56 +1,9 @@
 [
   {
     "stock":"sh600392",
-    "min_price":15.5,
+    "min_price":18.5,
     "email":"510645436@qq.com",
     "stock_name":"盛和资源"
-  },
-  {
-    "stock":"sz000786",
-    "min_price":24.2,
-    "email":"510645436@qq.com",
-    "stock_name":"北新建材"
-  },
-  {
-    "stock":"sz002743",
-    "min_price":8,
-    "email":"510645436@qq.com",
-    "stock_name":"富煌钢构"
-  },
-  {
-    "stock":"sz002223",
-    "min_price":22,
-    "email":"510645436@qq.com",
-    "stock_name":"鱼跃医疗"
-  },
-  {
-    "stock":"sh600581",
-    "min_price":12.4,
-    "email":"510645436@qq.com",
-    "stock_name":"康美药业"
-  },
-  {
-    "stock":"sh603139",
-    "min_price":23.4,
-    "email":"510645436@qq.com",
-    "stock_name":"康惠制药"
-  },
-  {
-    "stock":"sz002676",
-    "min_price":5,
-    "email":"510645436@qq.com",
-    "stock_name":"顺威股份"
-  },
-  {
-    "stock":"sh600848",
-    "min_price":24,
-    "email":"510645436@qq.com",
-    "stock_name":"上海临港"
-  },
-  {
-    "stock":"sz002457",
-    "min_price":9.5,
-    "email":"510645436@qq.com",
-    "stock_name":"青龙管业"
   }
+
 ]
