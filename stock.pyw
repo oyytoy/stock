@@ -5,7 +5,7 @@ import smtplib
 import threading
 from email.mime.text import MIMEText
 from email.utils import formataddr
-
+import datetime
 
 def getStockPrice(stock):
      url = "https://gupiao.baidu.com/tpl/betsInfo?code="+stock;
@@ -50,18 +50,21 @@ def read_config(fileName):
         pop_data = json.load(f)
     return pop_data
 
+def getHour():
+    i = datetime.datetime.now()
+    return i.hour
 
 def threading_warn():
-    with open("config.json",encoding='utf-8') as f:
-        pop_data = json.load(f)
+    hour = getHour()
+    if (hour>9 and hour < 15):
+        with open("config.json",encoding='utf-8') as f:
+            pop_data = json.load(f)
 
-        for pop_dict in pop_data:
-            stock = pop_dict['stock']
-            min_price = pop_dict['min_price']
-            email = pop_dict['email']
-            warn(stock,min_price,email)
-
-
+            for pop_dict in pop_data:
+                stock = pop_dict['stock']
+                min_price = pop_dict['min_price']
+                email = pop_dict['email']
+                warn(stock,min_price,email)
 
     timer = threading.Timer(30,threading_warn)
     timer.start()
@@ -70,3 +73,4 @@ if __name__=="__main__":
     # data = read_config("mail_config.json")
     # print(data["sender"])
     threading_warn()
+
