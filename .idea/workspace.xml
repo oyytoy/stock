@@ -5,7 +5,6 @@
       <change beforePath="" afterPath="$PROJECT_DIR$/mail_config.json" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/config.json" afterPath="$PROJECT_DIR$/config.json" />
-      <change beforePath="$PROJECT_DIR$/stock.py" afterPath="$PROJECT_DIR$/stock.py" />
       <change beforePath="$PROJECT_DIR$/stock.pyw" afterPath="$PROJECT_DIR$/stock.pyw" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -30,8 +29,8 @@
                 <state relative-caret-position="-342">
                   <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                   <folding>
-                    <marker date="1523425984675" expanded="true" signature="2154:2155" ph="..." />
-                    <marker date="1523425984675" expanded="true" signature="2154:2176" ph="..." />
+                    <marker date="1523426265188" expanded="true" signature="2161:2162" ph="..." />
+                    <marker date="1523426265188" expanded="true" signature="2161:2183" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -368,7 +367,7 @@
       <option name="presentableId" value="Default" />
       <updated>1523343879432</updated>
       <workItem from="1523343887166" duration="1366000" />
-      <workItem from="1523414160389" duration="5352000" />
+      <workItem from="1523414160389" duration="5497000" />
     </task>
     <task id="LOCAL-00001" summary="add">
       <created>1523344116007</created>
@@ -405,11 +404,18 @@
       <option name="project" value="LOCAL" />
       <updated>1523426011276</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add">
+      <created>1523426304299</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1523426304299</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6718000" />
+    <option name="totallyTimeSpent" value="6863000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -472,8 +478,8 @@
         <state relative-caret-position="-342">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1523425984675" expanded="true" signature="2154:2155" ph="..." />
-            <marker date="1523425984675" expanded="true" signature="2154:2176" ph="..." />
+            <marker date="1523426265188" expanded="true" signature="2161:2162" ph="..." />
+            <marker date="1523426265188" expanded="true" signature="2161:2183" ph="..." />
           </folding>
         </state>
       </provider>
