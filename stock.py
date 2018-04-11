@@ -10,7 +10,7 @@ from email.utils import formataddr
 def getStockPrice(stock):
      url = "https://gupiao.baidu.com/tpl/betsInfo?code="+stock;
      response  = requests.get(url)
-     #print(response.content)
+     print(response.content)
      text = json.loads(response.content)
      return [text['close'],text['html']]
 
@@ -44,21 +44,39 @@ def warn(stock,min_price,email):
     except Exception as e:
         print(e)
 
+def read_config():
+    with open("config.json",encoding='utf-8') as f:
+        pop_data = json.load(f)
+
+        for pop_dict in pop_data:
+            stock = pop_dict['stock']
+            min_price = pop_dict['min_price']
+            email = pop_dict['email']
+            print(stock)
 
 def threading_warn():
-    warn("sh600392",15.5,'510645436@qq.com')
-    warn("sz000786",24.2,'510645436@qq.com')
-    warn("sz002743",8,'510645436@qq.com')
-    warn("sz002223",22,'510645436@qq.com')
-    warn("sh600581",12.4,'510645436@qq.com')
-    warn("sh603139",23.4,'510645436@qq.com')
+    with open("config.json",encoding='utf-8') as f:
+        pop_data = json.load(f)
 
+        for pop_dict in pop_data:
+            stock = pop_dict['stock']
+            min_price = pop_dict['min_price']
+            email = pop_dict['email']
+            warn(stock,min_price,email)
+
+    # warn("sh600392",15.5,'510645436@qq.com')
+    # warn("sz000786",24.2,'510645436@qq.com')
+    # warn("sz002743",8,'510645436@qq.com')
+    # warn("sz002223",22,'510645436@qq.com')
+    # warn("sh600581",12.4,'510645436@qq.com')
+    # warn("sh603139",23.4,'510645436@qq.com')
 
     timer = threading.Timer(30,threading_warn)
     timer.start()
 
 if __name__=="__main__":
-    print("main")
+    #print("main")
     #getStockPrice("sh600392")
     #mail('510645436@qq.com')
+    # read_config()
     threading_warn()
