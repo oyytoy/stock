@@ -22,7 +22,7 @@ def mail(email,mailContent):
     ret=True
     try:
         msg=MIMEText(mailContent[0],'html','utf-8')
-        msg['From']=formataddr([sender])  # 括号里的对应发件人邮箱昵称、发件人邮箱账号
+        msg['From']=formataddr([sender,sender])  # 括号里的对应发件人邮箱昵称、发件人邮箱账号
         msg['To']=formataddr([email,my_user])              # 括号里的对应收件人邮箱昵称、收件人邮箱账号
         msg['Subject']="股票提醒"+ mailContent[1]              # 邮件的主题，也可以说是标题
 
