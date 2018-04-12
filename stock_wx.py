@@ -6,15 +6,18 @@ import threading
 from email.mime.text import MIMEText
 from email.utils import formataddr
 import datetime
-
+from wxpy import *
+# 初始化机器人，扫码登陆
+bot = Bot()
+my_friend = bot.friends().search('oyytoy',city='深圳')[0]
 stock_url = "https://gupiao.baidu.com/stock/{}.html"
 
 def getStockPrice(stock):
-     url = "https://gupiao.baidu.com/tpl/betsInfo?code="+stock;
-     response  = requests.get(url)
-     print(response.content)
-     text = json.loads(response.content)
-     return [text['close'],text['html']]
+    url = "https://gupiao.baidu.com/tpl/betsInfo?code="+stock;
+    response  = requests.get(url)
+    print(response.content)
+    text = json.loads(response.content)
+    return [text['close'],text['html']]
 
 def mail(email,mailContent):
     config = read_config("mail_config.json")
@@ -40,11 +43,12 @@ def warn(stock,min_price,email,stock_name):
     try:
         response = getStockPrice(stock)
         price = response[0]
-        baiduUrl = stock_url.format(stock)
-        mailContent = [stock_name+"--"+price+":"+baiduUrl+response[1],price]
+        mailContent = [response[1],price]
         #print(mailContent[0])
         if (float(price)<=min_price) :
+            baiduUrl = stock_url.format(stock)
             ret = mail(email,mailContent)
+            my_friend.send(stock_name+"--"+price+":"+baiduUrl)
     except Exception as e:
         print(e)
 

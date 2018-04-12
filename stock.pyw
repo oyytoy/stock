@@ -7,6 +7,8 @@ from email.mime.text import MIMEText
 from email.utils import formataddr
 import datetime
 
+stock_url = "https://gupiao.baidu.com/stock/{}.html"
+
 def getStockPrice(stock):
      url = "https://gupiao.baidu.com/tpl/betsInfo?code="+stock;
      response  = requests.get(url)
@@ -23,8 +25,8 @@ def mail(email,mailContent):
     try:
         msg=MIMEText(mailContent[0],'html','utf-8')
         msg['From']=formataddr([sender,sender])  # 括号里的对应发件人邮箱昵称、发件人邮箱账号
-        msg['To']=formataddr([email,my_user])              # 括号里的对应收件人邮箱昵称、收件人邮箱账号
-        msg['Subject']="股票提醒"+ mailContent[1]              # 邮件的主题，也可以说是标题
+        msg['To']=formataddr([email,my_user])          # 括号里的对应收件人邮箱昵称、收件人邮箱账号
+        msg['Subject']="股票提醒:"+mailContent[1]        # 邮件的主题，也可以说是标题
 
         server=smtplib.SMTP_SSL("smtp.qq.com", 465)  # 发件人邮箱中的SMTP服务器，端口是465
         server.login(sender, mail_pass)  # 括号中对应的是发件人邮箱账号、邮箱密码
@@ -34,11 +36,12 @@ def mail(email,mailContent):
         ret=False
     return ret
 
-def warn(stock,min_price,email):
+def warn(stock,min_price,email,stock_name):
     try:
         response = getStockPrice(stock)
         price = response[0]
-        mailContent = [response[1],price]
+        baiduUrl = stock_url.format(stock)
+        mailContent = [stock_name+"--"+price+":"+baiduUrl+response[1],price]
         #print(mailContent[0])
         if (float(price)<=min_price) :
             ret = mail(email,mailContent)
@@ -64,7 +67,8 @@ def threading_warn():
                 stock = pop_dict['stock']
                 min_price = pop_dict['min_price']
                 email = pop_dict['email']
-                warn(stock,min_price,email)
+                stock_name = pop_dict['stock_name']
+                warn(stock,min_price,email,stock_name)
 
     timer = threading.Timer(30,threading_warn)
     timer.start()
