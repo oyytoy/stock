@@ -1,7 +1,7 @@
 [
   {
     "stock":"sh600392",
-    "min_price":15.5,
+    "min_price":16,
     "email":"510645436@qq.com",
     "stock_name":"盛和资源"
   },
@@ -67,7 +67,7 @@
   },
   {
     "stock":"sz000973",
-    "min_price":4.94,
+    "min_price":4.90,
     "email":"510645436@qq.com",
     "stock_name":"佛塑科技"
   }
