@@ -1,13 +1,13 @@
 [
   {
     "stock":"sh600392",
-    "min_price":16,
+    "min_price":15.4,
     "email":"510645436@qq.com",
     "stock_name":"盛和资源"
   },
   {
     "stock":"sz000786",
-    "min_price":24.2,
+    "min_price":22.10,
     "email":"510645436@qq.com",
     "stock_name":"北新建材"
   },
@@ -25,9 +25,9 @@
   },
   {
     "stock":"sh600581",
-    "min_price":12.4,
+    "min_price":12,
     "email":"510645436@qq.com",
-    "stock_name":"康美药业"
+    "stock_name":"八一钢铁"
   },
   {
     "stock":"sh603139",
@@ -43,7 +43,7 @@
   },
   {
     "stock":"sh600848",
-    "min_price":24,
+    "min_price":23,
     "email":"510645436@qq.com",
     "stock_name":"上海临港"
   },
@@ -61,14 +61,44 @@
   },
   {
     "stock":"sh601212",
-    "min_price":6.0,
+    "min_price":5.65,
     "email":"510645436@qq.com",
     "stock_name":"白银有色"
   },
   {
     "stock":"sz000973",
-    "min_price":4.90,
+    "min_price":4.50,
     "email":"510645436@qq.com",
     "stock_name":"佛塑科技"
+  },
+  {  
+	"stock":"sz300482",
+    "min_price":59,
+    "email":"510645436@qq.com",
+    "stock_name":"万孚生物"
+  },
+  {  
+	"stock":"sh603799",
+    "min_price":59,
+    "email":"510645436@qq.com",
+    "stock_name":"华友钴业"
+  },
+  {
+	"stock":"sh600756",
+    "min_price":14,
+    "email":"510645436@qq.com",
+    "stock_name":"浪潮软件"
+  },
+  {
+	"stock":"sz000831",
+    "min_price":10,
+    "email":"510645436@qq.com",
+    "stock_name":"五矿稀土"
+  },
+  {
+	"stock":"sz300675",
+    "min_price":27,
+    "email":"510645436@qq.com",
+    "stock_name":"建科院"
   }
 ]

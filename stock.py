@@ -59,7 +59,7 @@ def getHour():
 
 def threading_warn():
     hour = getHour()
-    if (hour>9 and hour < 15):
+    if (hour>=9 and hour <= 15):
         with open("config.json",encoding='utf-8') as f:
             pop_data = json.load(f)
 
