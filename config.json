@@ -1,13 +1,13 @@
 [
   {
     "stock":"sh600392",
-    "min_price":15.4,
+    "min_price":15.6,
     "email":"510645436@qq.com",
     "stock_name":"盛和资源"
   },
   {
     "stock":"sz000786",
-    "min_price":22.10,
+    "min_price":22.20,
     "email":"510645436@qq.com",
     "stock_name":"北新建材"
   },
@@ -19,25 +19,25 @@
   },
   {
     "stock":"sz002223",
-    "min_price":22,
+    "min_price":19.10,
     "email":"510645436@qq.com",
     "stock_name":"鱼跃医疗"
   },
   {
     "stock":"sh600581",
-    "min_price":12,
+    "min_price":5.70,
     "email":"510645436@qq.com",
     "stock_name":"八一钢铁"
   },
   {
     "stock":"sh603139",
-    "min_price":23.4,
+    "min_price":22.5,
     "email":"510645436@qq.com",
     "stock_name":"康惠制药"
   },
   {
     "stock":"sz002676",
-    "min_price":5,
+    "min_price":4.90,
     "email":"510645436@qq.com",
     "stock_name":"顺威股份"
   },
@@ -61,7 +61,7 @@
   },
   {
     "stock":"sh601212",
-    "min_price":5.65,
+    "min_price":5.5,
     "email":"510645436@qq.com",
     "stock_name":"白银有色"
   },
@@ -100,5 +100,11 @@
     "min_price":27,
     "email":"510645436@qq.com",
     "stock_name":"建科院"
+  },
+  {
+	"stock":"sz002467",
+    "min_price":6.8,
+    "email":"510645436@qq.com",
+    "stock_name":"二六三"
   }
 ]
