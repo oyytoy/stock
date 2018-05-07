@@ -1,7 +1,7 @@
 [
   {
     "stock":"sh600392",
-    "min_price":15.6,
+    "min_price":15.55,
     "email":"510645436@qq.com",
     "stock_name":"盛和资源"
   },
@@ -25,7 +25,7 @@
   },
   {
     "stock":"sh600581",
-    "min_price":5.70,
+    "min_price":5.5,
     "email":"510645436@qq.com",
     "stock_name":"八一钢铁"
   },
@@ -37,7 +37,7 @@
   },
   {
     "stock":"sz002676",
-    "min_price":4.90,
+    "min_price":4.0,
     "email":"510645436@qq.com",
     "stock_name":"顺威股份"
   },
@@ -61,7 +61,7 @@
   },
   {
     "stock":"sh601212",
-    "min_price":5.5,
+    "min_price":5.4,
     "email":"510645436@qq.com",
     "stock_name":"白银有色"
   },
